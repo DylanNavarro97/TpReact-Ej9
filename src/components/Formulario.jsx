@@ -1,13 +1,13 @@
 import { Button, FormControl } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 
-export const Formulario = () => {
+export const Formulario = ({handleChange, handleSubmit , formulario}) => {
   return (
     <div className="d-flex flex-column align-content-center shadow">
       <div className="headerFormulario shadow-sm p-3">
         <p className="fw-bold m-0">Llenar el formulario para crear una cita</p>
       </div>
-      <Form className="">
+      <Form onSubmit={handleSubmit}>
         <div className="formularioF container-fluid py-3 py-md-4 px-md-5">
           <div className="row mb-2">
             <div className="col-md-4 d-flex align-items-center mb-2 mb-md-0">
@@ -22,6 +22,8 @@ export const Formulario = () => {
                 required
                 minLength={3}
                 maxLength={30}
+                onChange={handleChange}
+                value={formulario.nombreMascota}
               />
             </div>
           </div>
@@ -39,6 +41,8 @@ export const Formulario = () => {
                 required
                 minLength={3}
                 maxLength={30}
+                onChange={handleChange}
+                value={formulario.nombreDueno}
               />
             </div>
           </div>
@@ -57,6 +61,8 @@ export const Formulario = () => {
                       name="fecha"
                       id="fecha"
                       required
+                      onChange={handleChange}
+                      value={formulario.fecha}
                     />
                   </div>
 
@@ -73,6 +79,8 @@ export const Formulario = () => {
                       name="hora"
                       id="hora"
                       required
+                      onChange={handleChange}
+                      value={formulario.hora}
                     />
                   </div>
                 </div>
@@ -93,6 +101,8 @@ export const Formulario = () => {
                 required
                 minLength={3}
                 maxLength={50}
+                onChange={handleChange}
+                value={formulario.sintomas}
               />
             </div>
           </div>
