@@ -1,0 +1,21 @@
+.formularioF{
+    background-color: rgb(208, 236, 255);
+}
+
+.cardCita{
+    display: flex;
+    flex-direction: column;
+    max-width: 290px;
+}
+
+.headerCardCita{
+
+}
+
+.cardCitaBody{
+    
+}
+
+.colorCard{
+    background-color: rgb(203, 236, 255);
+}
